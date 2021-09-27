@@ -1,14 +1,15 @@
-function main(a,b,c) {
-    a = 2;
-    b = 3;
-    c = summ;
 
-    function sum (a, b) { 
-        summ = a +b ;
-        return;
-    }
-    return;
+function sum (a, b) { 
+    return a + b ;
 }
-console.log(main);
 
+function main(a,b,c) {
+    if (typeof c === 'function') {
+       return c;
+    } else {
+        return sum(a,b);
+    }
+    
+} 
 
+console.log(c);
