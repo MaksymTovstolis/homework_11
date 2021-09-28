@@ -1,15 +1,11 @@
-
-function sum (a, b) { 
+function sum (a, b) {
     return a + b ;
-}
-
-function main(a,b,c) {
-    if (typeof c === 'function') {
-       return c;
-    } else {
-        return sum(a,b);
-    }
-    
 } 
-
-console.log(c);
+  
+function main(a, b, c) {
+    const sumResult = sum(a, b);
+    if (typeof c === 'function') {
+        return c(sumResult);
+    }
+    return sumResult;
+}
